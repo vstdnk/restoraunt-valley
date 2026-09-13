@@ -31,8 +31,12 @@
         /* Телеграм закрывает мини-апп свайпом вниз: гасим и bounce, и pull-to-close. */
         overscroll-behavior: none;
         overflow: hidden;
-        /* Жесты по канвасу — наши: перетаскивание мебели, а не скролл страницы. */
-        touch-action: none;
+        /*
+         * manipulation убирает двойной тап-зум, но оставляет скролл — он нужен
+         * спискам в каталоге и панели сотрудников. Канвасу touch-action: none
+         * ставит сам PixiJS, там жесты наши.
+         */
+        touch-action: manipulation;
         -webkit-user-select: none;
         user-select: none;
         /* Долгое нажатие на iOS иначе показывает меню «Скопировать / Поделиться». */
@@ -82,14 +86,14 @@
         }
       }
     </style>
-    <script type="module" crossorigin src="/restoraunt-valley/assets/index-DR8yEEOA.js"></script>
+    <script type="module" crossorigin src="/restoraunt-valley/assets/index-BQqtFWBx.js"></script>
     <link rel="modulepreload" crossorigin href="/restoraunt-valley/assets/react-VKYPKYN3.js">
     <link rel="modulepreload" crossorigin href="/restoraunt-valley/assets/three-jQUg3jnV.js">
     <link rel="modulepreload" crossorigin href="/restoraunt-valley/assets/pixi-DLSZSldy.js">
-    <link rel="stylesheet" crossorigin href="/restoraunt-valley/assets/index-p2PG4P5e.css">
+    <link rel="stylesheet" crossorigin href="/restoraunt-valley/assets/index-m3JcrvqZ.css">
   </head>
   <body>
     <div id="root"></div>
-    <div id="boot"><div class="ring"></div><div class="label">Открываем ресторан…</div></div>
+    <div id="boot"><div class="ring"></div><div class="label">Открываем ресторан…</div></div>
   </body>
 </html>
